@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortune's Weave Army Planner</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Fortune's Weave <span>Army Planner</span></h1>
+  <nav id="route-tabs"></nav>
+  <div class="header-actions">
+    <label class="slot-count">Slots
+      <select id="slot-count">
+        <option>8</option><option>10</option><option selected>12</option>
+        <option>14</option><option>16</option>
+      </select>
+    </label>
+    <select id="copy-from" title="Copy another route's army into this one">
+      <option value="">Copy army from…</option>
+    </select>
+    <button class="btn" id="btn-share">&#x1F517; Copy link</button>
+    <button class="btn" id="btn-clear">&#x1F5D1; Clear route</button>
+    <span class="save-note" id="save-note" title="Plans are stored in this browser"></span>
+  </div>
+</header>
+
+<div class="banner" id="undo-banner" hidden>
+  <span id="undo-text"></span>
+  <button class="btn" id="btn-undo">Restore my saved plan</button>
+  <button class="banner__close" id="btn-undo-dismiss" title="Keep the link's army">&#x2715;</button>
+</div>
+
+<div class="layout">
+
+  <!-- ── left panel: party, recruit plan, analysis ────────────────────── -->
+  <div class="panel-left">
+
+    <div class="panel-section">
+      <p class="section-title">
+        Your Army <span class="section-sub" id="party-count"></span>
+      </p>
+      <ol id="party-slots"></ol>
+    </div>
+
+    <div class="panel-section">
+      <p class="section-title">Recruitment Plan</p>
+      <div class="plan-summary" id="plan-summary"></div>
+      <ol id="plan-list"></ol>
+      <p class="hint" id="plan-empty">Pick characters from the roster to build a recruitment order.</p>
+    </div>
+
+    <div class="panel-section">
+      <p class="section-title">Required Paralogues</p>
+      <div id="paralogue-list"></div>
+    </div>
+
+    <div class="panel-section">
+      <p class="section-title">Gift Cheat Sheet</p>
+      <div id="gift-sheet"></div>
+    </div>
+
+    <div class="panel-section">
+      <p class="section-title">Proficiency Coverage</p>
+      <div class="tally-wrap">
+        <table id="prof-table"><tbody id="prof-body"></tbody></table>
+      </div>
+      <p class="hint">Counts army members with a natural proficiency in each skill — an easy way to spot a missing healer, flier, or bow user.</p>
+    </div>
+
+    <div class="panel-section">
+      <p class="section-title">Average Growths <span class="section-sub" id="growth-mode"></span></p>
+      <div class="tally-wrap">
+        <table id="growth-table"><tbody id="growth-body"></tbody></table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── right panel: roster picker ───────────────────────────────────── -->
+  <div class="panel-right">
+
+    <div class="mode-switch">
+      <button class="mode-btn mode-btn--active" data-mode="characters">Characters</button>
+      <button class="mode-btn" data-mode="classes">Classes</button>
+    </div>
+
+    <div class="filters" data-for="characters">
+      <input type="text" id="search" placeholder="Search characters…" autocomplete="off">
+      <select id="faction-filter"><option value="">All Factions</option></select>
+      <select id="prof-filter"><option value="">Any Proficiency</option></select>
+      <select id="sort-by">
+        <option value="chapter">Sort: Join order</option>
+        <option value="renown">Sort: Renown needed</option>
+        <option value="name">Sort: Name</option>
+      </select>
+      <label class="filter-label">
+        <input type="checkbox" id="this-route-only" checked> On this route
+      </label>
+      <label class="filter-label">
+        <input type="checkbox" id="free-only"> No requirements
+      </label>
+    </div>
+
+    <div class="filters" data-for="classes" hidden>
+      <input type="text" id="class-search" placeholder="Search classes…" autocomplete="off">
+      <select id="tier-filter"><option value="">All Tiers</option></select>
+      <select id="unit-filter"><option value="">All Unit Types</option></select>
+      <select id="class-skill-filter"><option value="">Any Skill</option></select>
+      <label class="filter-label">
+        <input type="checkbox" id="in-build-only"> In this army's builds
+      </label>
+    </div>
+
+    <div id="roster-grid"></div>
+    <div id="class-grid" hidden></div>
+  </div>
+
+</div>
+
+<footer>
+  Part I recruitment data, growth rates and class requirements scraped from
+  <a href="https://game8.co/games/Fire-Emblem-Fortunes-Weave" target="_blank" rel="noopener">Game8</a>,
+  whose guides are still being filled in — re-run <code>scripts/fetch.py --force</code> for fresher numbers.
+  Characters who join in later Parts are not listed yet.
+</footer>
+
+<!-- ── detail modal ───────────────────────────────────────────────────── -->
+<div id="detail-backdrop" hidden>
+  <div id="detail" role="dialog" aria-modal="true"></div>
+</div>
+
+<!-- ── templates ──────────────────────────────────────────────────────── -->
+<template id="slot-tmpl">
+  <li class="slot slot--empty">
+    <div class="slot__head">
+      <div class="slot__img-wrap"><img class="slot__img" src="" alt=""></div>
+      <div class="slot__info">
+        <span class="slot__name"></span>
+        <span class="slot__join"></span>
+      </div>
+      <button class="slot__remove" title="Remove">&#x2715;</button>
+    </div>
+    <div class="slot__build"></div>
+    <span class="slot__final"></span>
+    <span class="slot__class-req"></span>
+  </li>
+</template>
+
+<script type="module" src="static/js/main.js"></script>
+</body>
+</html>
