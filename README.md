@@ -70,6 +70,26 @@ army slot and from the steps of a character's recommended class path.
 Sword/Bow/White Magic/Flier/etc. users — an easy way to notice you have no healer — and
 the growth table averages the army's growth rates per stat.
 
+**Local persistence.** Every change writes all four route plans, the slot count and the
+active browser tab to `localStorage`, and the header shows when it last saved — so you can
+close the tab and pick the plan back up later. If the browser refuses storage (private
+window, blocked site data) the header says so in red rather than pretending.
+
+The URL hash mirrors the current route's army so a link can be shared. Opening a link
+whose army differs from what you had saved shows a banner offering to restore the saved
+plan, so an old bookmark can't quietly overwrite current work. Storage is per-origin, so
+the deployed site and a local server keep separate plans — move one across with *Copy
+link*.
+
+## Deploying
+
+`.github/workflows/pages.yml` publishes the repo root to GitHub Pages on every push to
+`main`. `actions/configure-pages` runs with `enablement: true`, so the first successful run
+turns Pages on by itself — nothing to set in Settings. The site is plain static files, so
+there is no build step.
+
+Live at <https://itsamenick.github.io/fortune-weave-planner/>.
+
 ## Data pipeline
 
 Data is scraped from the [Game8 guides](https://game8.co/games/Fire-Emblem-Fortunes-Weave).
