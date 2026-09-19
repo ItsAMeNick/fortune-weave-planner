@@ -22,13 +22,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      # enablement: true turns Pages on for the repo on the first run, so there
-      # is nothing to click in Settings.
+      # Pages must be switched on once by hand (Settings -> Pages -> Source:
+      # GitHub Actions); the workflow token is not allowed to create the site.
+      # After that this step just reads the existing configuration.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       # The site is plain static files at the repo root — no build step.
       - uses: actions/upload-pages-artifact@v3

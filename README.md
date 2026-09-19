@@ -84,9 +84,13 @@ link*.
 ## Deploying
 
 `.github/workflows/pages.yml` publishes the repo root to GitHub Pages on every push to
-`main`. `actions/configure-pages` runs with `enablement: true`, so the first successful run
-turns Pages on by itself — nothing to set in Settings. The site is plain static files, so
-there is no build step.
+`main`. The site is plain static files, so there is no build step — the workflow uploads
+the repo as-is.
+
+Pages itself has to be switched on once by hand, under **Settings → Pages → Build and
+deployment → Source → GitHub Actions**. A workflow token cannot create the Pages site
+(`Resource not accessible by integration`), so `configure-pages` only reads the
+configuration that setting produces.
 
 Live at <https://itsamenick.github.io/fortune-weave-planner/>.
 
