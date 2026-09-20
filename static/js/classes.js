@@ -938,8 +938,8 @@ export default {
       "HP": 3,
       "Str": 0,
       "Mag": 0,
-      "Spd": 0,
-      "Dex": 1,
+      "Spd": 1,
+      "Dex": 0,
       "Def": 1,
       "Res": 0,
       "Lck": 0,
@@ -949,7 +949,7 @@ export default {
       "HP": 10,
       "Str": 10,
       "Mag": -5,
-      "Spd": 5,
+      "Spd": 0,
       "Dex": 0,
       "Def": 5,
       "Res": 10,
@@ -987,8 +987,8 @@ export default {
       "HP": 1,
       "Str": 0,
       "Mag": 3,
-      "Spd": 0,
-      "Dex": 1,
+      "Spd": 1,
+      "Dex": 0,
       "Def": 0,
       "Res": 5,
       "Lck": 3,
@@ -998,7 +998,7 @@ export default {
       "HP": 10,
       "Str": -5,
       "Mag": 15,
-      "Spd": 5,
+      "Spd": 0,
       "Dex": 0,
       "Def": -10,
       "Res": 20,
@@ -1246,8 +1246,8 @@ export default {
       "HP": 5,
       "Str": 3,
       "Mag": 0,
-      "Spd": 0,
-      "Dex": -5,
+      "Spd": -5,
+      "Dex": 0,
       "Def": 9,
       "Res": -1,
       "Lck": 0,
@@ -1257,8 +1257,8 @@ export default {
       "HP": 15,
       "Str": 15,
       "Mag": -5,
-      "Spd": 5,
-      "Dex": -10,
+      "Spd": -10,
+      "Dex": 5,
       "Def": 30,
       "Res": -10,
       "Lck": 0,
@@ -1269,10 +1269,10 @@ export default {
   "elephant-rider": {
     "name": "Elephant Rider",
     "icon": "https://img.game8.co/4624491/fc6138d73425fef8d119a17ddc69a43e.png/show",
-    "tier": "Advanced",
+    "tier": "Elephant",
     "part": 3,
     "level": 35,
-    "renown": 8,
+    "renown": 0,
     "skills": [
       {
         "skill": "Rider",
@@ -1281,9 +1281,40 @@ export default {
       }
     ],
     "abilities": {
-      "class": [],
-      "master": []
-    }
+      "class": [
+        "War-Elephant Boots",
+        "Elephant Tactics",
+        "Elephant Rider's Path"
+      ],
+      "master": [
+        "Elephant Vanguard"
+      ]
+    },
+    "unitType": "Cavalry",
+    "movement": 5,
+    "bonuses": {
+      "HP": 10,
+      "Str": 2,
+      "Mag": 0,
+      "Spd": -5,
+      "Dex": 3,
+      "Def": 7,
+      "Res": 0,
+      "Lck": 0,
+      "Cha": 3
+    },
+    "growths": {
+      "HP": 20,
+      "Str": 10,
+      "Mag": -5,
+      "Spd": 20,
+      "Dex": -10,
+      "Def": 15,
+      "Res": -5,
+      "Lck": 5,
+      "Cha": 10
+    },
+    "skillExp": "Rider +2"
   },
   "forest-knight": {
     "name": "Forest Knight",
@@ -1320,8 +1351,8 @@ export default {
       "HP": 1,
       "Str": 0,
       "Mag": 0,
-      "Spd": 2,
-      "Dex": 5,
+      "Spd": 5,
+      "Dex": 2,
       "Def": 1,
       "Res": 0,
       "Lck": 0,
@@ -1331,7 +1362,7 @@ export default {
       "HP": 10,
       "Str": 5,
       "Mag": 0,
-      "Spd": 15,
+      "Spd": 10,
       "Dex": 10,
       "Def": 5,
       "Res": 5,
@@ -1418,8 +1449,8 @@ export default {
       "HP": 1,
       "Str": 0,
       "Mag": 4,
-      "Spd": 4,
-      "Dex": 3,
+      "Spd": 3,
+      "Dex": 4,
       "Def": 0,
       "Res": 4,
       "Lck": 0,
@@ -1429,8 +1460,8 @@ export default {
       "HP": 10,
       "Str": -5,
       "Mag": 20,
-      "Spd": 15,
-      "Dex": 5,
+      "Spd": 5,
+      "Dex": 15,
       "Def": -10,
       "Res": 15,
       "Lck": 10,
@@ -1505,7 +1536,7 @@ export default {
     "growths": {
       "HP": 10,
       "Str": 5,
-      "Mag": 15,
+      "Mag": 0,
       "Spd": 15,
       "Dex": 10,
       "Def": 0,
@@ -1710,10 +1741,98 @@ export default {
     ],
     "abilities": {
       "class": [
-        "Combat Arts +3"
+        "Combat Arts +3",
+        "Axe Hit +7",
+        "Brawl Hit +7"
       ],
-      "master": []
-    }
+      "master": [
+        "War Master's Strike"
+      ]
+    },
+    "unitType": "Infantry",
+    "movement": 5,
+    "bonuses": {
+      "HP": 13,
+      "Str": 6,
+      "Mag": 0,
+      "Spd": 2,
+      "Dex": 0,
+      "Def": 4,
+      "Res": 0,
+      "Lck": 0,
+      "Cha": 0
+    },
+    "growths": {
+      "HP": 25,
+      "Str": 25,
+      "Mag": -5,
+      "Spd": -5,
+      "Dex": 5,
+      "Def": 10,
+      "Res": -5,
+      "Lck": -5,
+      "Cha": 5
+    },
+    "skillExp": "Swords +2, Axes +4, Brawling +2, Infantry +1"
+  },
+  "bau-lord": {
+    "name": "Bau Lord",
+    "icon": "https://img.game8.co/4624507/368c05fb5edcf9095383a309297992f7.png/show",
+    "tier": "Master",
+    "part": 3,
+    "level": 45,
+    "renown": 0,
+    "skills": [
+      {
+        "skill": "Flier",
+        "rank": "C",
+        "kind": "primary"
+      },
+      {
+        "skill": "Axe",
+        "rank": "A",
+        "kind": "secondary"
+      },
+      {
+        "skill": "Spear",
+        "rank": "A",
+        "kind": "secondary"
+      }
+    ],
+    "abilities": {
+      "class": [
+        "Combat Arts +2",
+        "Mount/Dismount"
+      ],
+      "master": [
+        "Ambush"
+      ]
+    },
+    "unitType": "Flier",
+    "movement": 7,
+    "bonuses": {
+      "HP": 5,
+      "Str": 2,
+      "Mag": 0,
+      "Spd": 3,
+      "Dex": 3,
+      "Def": 3,
+      "Res": 0,
+      "Lck": 0,
+      "Cha": 0
+    },
+    "growths": {
+      "HP": 15,
+      "Str": 5,
+      "Mag": 0,
+      "Spd": 5,
+      "Dex": 0,
+      "Def": 10,
+      "Res": 10,
+      "Lck": 10,
+      "Cha": 5
+    },
+    "skillExp": "Swords +1, Spears +2, Axes +3, Flying +4"
   },
   "bow-adept": {
     "name": "Bow Adept",
@@ -1731,7 +1850,63 @@ export default {
     ],
     "abilities": {
       "class": [
-        "Combat Arts +3"
+        "Combat Arts +3",
+        "Bow Hit +15"
+      ],
+      "master": [
+        "Sky Hunter"
+      ]
+    },
+    "unitType": "Infantry",
+    "movement": 5,
+    "bonuses": {
+      "HP": 4,
+      "Str": 2,
+      "Mag": 0,
+      "Spd": 5,
+      "Dex": 9,
+      "Def": 0,
+      "Res": 0,
+      "Lck": 0,
+      "Cha": 0
+    },
+    "growths": {
+      "HP": 15,
+      "Str": 5,
+      "Mag": 0,
+      "Spd": 15,
+      "Dex": 20,
+      "Def": 5,
+      "Res": 5,
+      "Lck": 5,
+      "Cha": 5
+    },
+    "skillExp": "Bow +4, Infantry +2"
+  },
+  "bow-knight": {
+    "name": "Bow Knight",
+    "icon": "https://img.game8.co/4625362/ac5730c99688311dc7b102be5b9afc39.png/show",
+    "tier": "Master",
+    "part": 3,
+    "level": 45,
+    "renown": 0,
+    "skills": [
+      {
+        "skill": "Rider",
+        "rank": "D",
+        "kind": "primary"
+      },
+      {
+        "skill": "Bow",
+        "rank": "A",
+        "kind": "primary"
+      }
+    ],
+    "abilities": {
+      "class": [
+        "Combat Arts +2",
+        "Mount/Dismount",
+        "Bow Hit +10"
       ],
       "master": []
     }
@@ -1762,10 +1937,98 @@ export default {
     ],
     "abilities": {
       "class": [
-        "Combat Arts +3"
+        "Combat Arts +3",
+        "Strike-Last Def +7"
       ],
-      "master": []
-    }
+      "master": [
+        "Intercept"
+      ]
+    },
+    "unitType": "Infantry",
+    "movement": 4,
+    "bonuses": {
+      "HP": 9,
+      "Str": 6,
+      "Mag": 0,
+      "Spd": -6,
+      "Dex": 4,
+      "Def": 13,
+      "Res": -2,
+      "Lck": 0,
+      "Cha": 0
+    },
+    "growths": {
+      "HP": 25,
+      "Str": 20,
+      "Mag": -5,
+      "Spd": -15,
+      "Dex": 5,
+      "Def": 30,
+      "Res": -10,
+      "Lck": 0,
+      "Cha": 5
+    },
+    "skillExp": "Spears +2, Axes +2, Infantry +1, Heavy +4"
+  },
+  "celestial-trooper": {
+    "name": "Celestial Trooper",
+    "icon": "https://img.game8.co/4624509/3cb46c965ba43feeb147860e8c8d6e4b.png/show",
+    "tier": "Master",
+    "part": 3,
+    "level": 45,
+    "renown": 0,
+    "skills": [
+      {
+        "skill": "Flier",
+        "rank": "C",
+        "kind": "primary"
+      },
+      {
+        "skill": "Spear",
+        "rank": "A",
+        "kind": "secondary"
+      },
+      {
+        "skill": "Sword",
+        "rank": "A",
+        "kind": "secondary"
+      }
+    ],
+    "abilities": {
+      "class": [
+        "Mount/Dismount",
+        "Combat Arts +1",
+        "Flying Avo +7"
+      ],
+      "master": [
+        "Lightning Reflexes"
+      ]
+    },
+    "unitType": "Flier",
+    "movement": 7,
+    "bonuses": {
+      "HP": 3,
+      "Str": 0,
+      "Mag": 0,
+      "Spd": 5,
+      "Dex": 3,
+      "Def": 0,
+      "Res": 5,
+      "Lck": 0,
+      "Cha": 2
+    },
+    "growths": {
+      "HP": 15,
+      "Str": 5,
+      "Mag": -5,
+      "Spd": 10,
+      "Dex": 5,
+      "Def": 5,
+      "Res": 15,
+      "Lck": 15,
+      "Cha": 10
+    },
+    "skillExp": "Swords +2, Spears +3, Flying +4"
   },
   "druid": {
     "name": "Druid",
@@ -1783,6 +2046,97 @@ export default {
     ],
     "abilities": {
       "class": [
+        "Black-Magic Seeker",
+        "Magic Hit +7"
+      ],
+      "master": []
+    },
+    "unitType": "Infantry",
+    "movement": 5,
+    "bonuses": {
+      "HP": 4,
+      "Str": 0,
+      "Mag": 7,
+      "Spd": 4,
+      "Dex": 7,
+      "Def": 0,
+      "Res": 5,
+      "Lck": 0,
+      "Cha": -2
+    },
+    "growths": {
+      "HP": 10,
+      "Str": -5,
+      "Mag": 30,
+      "Spd": 15,
+      "Dex": 10,
+      "Def": -10,
+      "Res": 20,
+      "Lck": 10,
+      "Cha": 0
+    },
+    "skillExp": "Swords +2, Brawling +1, Black Magic +4, Infantry +1"
+  },
+  "great-knight": {
+    "name": "Great Knight",
+    "icon": "https://img.game8.co/4625361/2234dfe2cec93ff5edc7fdc62d4f4cc3.png/show",
+    "tier": "Master",
+    "part": 3,
+    "level": 45,
+    "renown": 0,
+    "skills": [
+      {
+        "skill": "Heavy",
+        "rank": "D",
+        "kind": "primary"
+      },
+      {
+        "skill": "Rider",
+        "rank": "D",
+        "kind": "primary"
+      },
+      {
+        "skill": "Axe",
+        "rank": "A",
+        "kind": "secondary"
+      },
+      {
+        "skill": "Spear",
+        "rank": "A",
+        "kind": "secondary"
+      }
+    ],
+    "abilities": {
+      "class": [
+        "Combat Arts +2",
+        "Mount/Dismount"
+      ],
+      "master": []
+    }
+  },
+  "high-savant": {
+    "name": "High Savant",
+    "icon": "https://img.game8.co/4625359/d857c3261507e99f6580651e8be955c2.png/show",
+    "tier": "Master",
+    "part": 3,
+    "level": 45,
+    "renown": 0,
+    "skills": [
+      {
+        "skill": "Rider",
+        "rank": "D",
+        "kind": "primary"
+      },
+      {
+        "skill": "Black Magic",
+        "rank": "D",
+        "kind": "primary"
+      }
+    ],
+    "abilities": {
+      "class": [
+        "Combat Arts +2",
+        "Mount/Dismount",
         "Black-Magic Seeker"
       ],
       "master": []
@@ -1817,8 +2171,35 @@ export default {
         "Mount/Dismount",
         "Combat Arts +3"
       ],
-      "master": []
-    }
+      "master": [
+        "Fierce Spear"
+      ]
+    },
+    "unitType": "Cavalry",
+    "movement": 7,
+    "bonuses": {
+      "HP": 7,
+      "Str": 3,
+      "Mag": 0,
+      "Spd": 2,
+      "Dex": 3,
+      "Def": 2,
+      "Res": 0,
+      "Lck": 0,
+      "Cha": 2
+    },
+    "growths": {
+      "HP": 15,
+      "Str": 15,
+      "Mag": -5,
+      "Spd": 0,
+      "Dex": 5,
+      "Def": 5,
+      "Res": 5,
+      "Lck": 5,
+      "Cha": 10
+    },
+    "skillExp": "Swords +2, Spears +3, Axes +1, Riding +4"
   },
   "sentinel": {
     "name": "Sentinel",
@@ -1840,8 +2221,35 @@ export default {
         "Magic Heal +10",
         "Combat Arts +3"
       ],
-      "master": []
-    }
+      "master": [
+        "Resolute Stance"
+      ]
+    },
+    "unitType": "Infantry",
+    "movement": 5,
+    "bonuses": {
+      "HP": 5,
+      "Str": 4,
+      "Mag": 0,
+      "Spd": 2,
+      "Dex": 4,
+      "Def": 4,
+      "Res": 5,
+      "Lck": 0,
+      "Cha": 0
+    },
+    "growths": {
+      "HP": 15,
+      "Str": 15,
+      "Mag": 0,
+      "Spd": 5,
+      "Dex": 5,
+      "Def": 10,
+      "Res": 15,
+      "Lck": 5,
+      "Cha": 5
+    },
+    "skillExp": "Spears +4, White Magic +2, Infantry +1"
   },
   "shadow-seeker": {
     "name": "Shadow Seeker",
@@ -1865,7 +2273,55 @@ export default {
     "abilities": {
       "class": [
         "Locktouch",
-        "Search",
+        "Combat Arts +3",
+        "Master Search"
+      ],
+      "master": [
+        "Dropshadow Blade"
+      ]
+    },
+    "unitType": "Infantry",
+    "movement": 5,
+    "bonuses": {
+      "HP": 4,
+      "Str": 0,
+      "Mag": 0,
+      "Spd": 9,
+      "Dex": 7,
+      "Def": 0,
+      "Res": 0,
+      "Lck": 2,
+      "Cha": -2
+    },
+    "growths": {
+      "HP": 15,
+      "Str": 5,
+      "Mag": 0,
+      "Spd": 15,
+      "Dex": 25,
+      "Def": 0,
+      "Res": 10,
+      "Lck": 15,
+      "Cha": 0
+    },
+    "skillExp": "Swords +2, Bows +3, Infantry +4"
+  },
+  "sword-master": {
+    "name": "Sword Master",
+    "icon": "https://img.game8.co/4625360/2c44211fdd8b7e9ca84416698f84cc70.png/show",
+    "tier": "Master",
+    "part": 3,
+    "level": 45,
+    "renown": 0,
+    "skills": [
+      {
+        "skill": "Sword",
+        "rank": "A",
+        "kind": "primary"
+      }
+    ],
+    "abilities": {
+      "class": [
         "Combat Arts +3"
       ],
       "master": []
@@ -1873,24 +2329,24 @@ export default {
   },
   "valkyrium": {
     "name": "Valkyrium",
-    "icon": "https://img.game8.co/4624509/3cb46c965ba43feeb147860e8c8d6e4b.png/show",
+    "icon": "https://img.game8.co/4625363/2ccf279eeb27a72a201d7a8f33afc38d.png/show",
     "tier": "Master",
     "part": 3,
     "level": 45,
     "renown": 0,
     "skills": [
       {
-        "skill": "Flier",
-        "rank": "C",
+        "skill": "Rider",
+        "rank": "D",
         "kind": "primary"
       },
       {
-        "skill": "Spear",
+        "skill": "White Magic",
         "rank": "A",
         "kind": "secondary"
       },
       {
-        "skill": "Sword",
+        "skill": "Black Magic",
         "rank": "A",
         "kind": "secondary"
       }
@@ -1898,21 +2354,35 @@ export default {
     "abilities": {
       "class": [
         "Mount/Dismount",
-        "Combat Arts +1"
+        "Magic Heal +10"
       ],
       "master": []
     }
   },
   "war-monk": {
     "name": "War Monk",
-    "icon": "",
+    "icon": "https://img.game8.co/4625364/b2c0d2bd0cbd02c4c1ac1b33d91eaa8c.png/show",
     "tier": "Master",
     "part": 3,
     "level": 45,
     "renown": 0,
-    "skills": [],
+    "skills": [
+      {
+        "skill": "White Magic",
+        "rank": "D",
+        "kind": "primary"
+      },
+      {
+        "skill": "Brawling",
+        "rank": "B",
+        "kind": "primary"
+      }
+    ],
     "abilities": {
-      "class": [],
+      "class": [
+        "White-Magic Seeker",
+        "Combat Arts +3"
+      ],
       "master": []
     }
   },
@@ -1932,9 +2402,37 @@ export default {
     ],
     "abilities": {
       "class": [
-        "White-Magic Seeker"
+        "White-Magic Seeker",
+        "Magic Heal +15"
       ],
-      "master": []
-    }
+      "master": [
+        "Dominate Magic"
+      ]
+    },
+    "unitType": "Infantry",
+    "movement": 5,
+    "bonuses": {
+      "HP": 4,
+      "Str": 0,
+      "Mag": 5,
+      "Spd": 2,
+      "Dex": 2,
+      "Def": 0,
+      "Res": 9,
+      "Lck": 4,
+      "Cha": 2
+    },
+    "growths": {
+      "HP": 10,
+      "Str": -5,
+      "Mag": 20,
+      "Spd": 0,
+      "Dex": 5,
+      "Def": -10,
+      "Res": 25,
+      "Lck": 20,
+      "Cha": 10
+    },
+    "skillExp": "Axes +1, Brawling +2, White Magic +4, Infantry +1"
   }
 };

@@ -114,7 +114,7 @@ export default {
     ],
     "routes": {
       "cai": {
-        "chapter": "Part I Chapter 3",
+        "chapter": "Part I Chapter 6",
         "support": 3,
         "renown": 9,
         "negotiation": "",
@@ -144,7 +144,7 @@ export default {
     },
     "earliest": [
       1,
-      3
+      5
     ]
   },
   "bonaventure": {
@@ -1050,7 +1050,7 @@ export default {
         "renown": 10,
         "negotiation": "",
         "extra": [
-          "Clear Bertrand's Paralogue"
+          "Clear Bertrand's Paralogue and reach Chapter 12"
         ]
       },
       "theodora": null,
@@ -1114,22 +1114,28 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 6,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Giants' Meat to Goliath"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 9,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Giants' Meat to Goliath"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 10,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Giants' Meat to Goliath"
+        ]
       }
     },
     "earliest": [
@@ -1647,29 +1653,37 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 10,
-        "negotiation": "Challenging",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Complete Jester's Three Combat Quests"
+        ]
       },
       "dietrich": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 6,
-        "negotiation": "Challenging",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Complete Jester's Three Combat Quests"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 9,
-        "negotiation": "Challenging",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Complete Jester's Three Combat Quests"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 10,
-        "negotiation": "Challenging",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Complete Jester's Three Combat Quests"
+        ]
       }
     },
     "earliest": [
@@ -1720,8 +1734,10 @@ export default {
         "chapter": "Part I Chapter 6",
         "support": 3,
         "renown": 8,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Pure Water to Kiroc"
+        ]
       },
       "dietrich": {
         "chapter": "Part I Chapter 6",
@@ -1729,22 +1745,26 @@ export default {
         "renown": 4,
         "negotiation": "",
         "extra": [
-          "Pure Water x3"
+          "Give 3 Pure Water to Kiroc"
         ]
       },
       "theodora": {
         "chapter": "Part I Chapter 7",
         "support": 3,
         "renown": 10,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Pure Water to Kiroc"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter 5",
         "support": 1,
         "renown": 4,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Pure Water to Kiroc"
+        ]
       }
     },
     "earliest": [
@@ -2015,29 +2035,37 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 9,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Gather infortmation at Callianeira Port and report back to Ludia"
+        ]
       },
       "dietrich": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 9,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Gather infortmation at Callianeira Port and report back to Ludia"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 7,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Gather infortmation at Callianeira Port and report back to Ludia"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 7,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Gather infortmation at Callianeira Port and report back to Ludia"
+        ]
       }
     },
     "earliest": [
@@ -2089,15 +2117,19 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 8,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 5 Iron Spears to Lysander"
+        ]
       },
       "dietrich": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 6,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 5 Iron Spears to Lysander"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 4",
@@ -2110,8 +2142,10 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 7,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 5 Iron Spears to Lysander"
+        ]
       }
     },
     "earliest": [
@@ -2323,25 +2357,31 @@ export default {
     ],
     "routes": {
       "cai": {
-        "chapter": "Part I Chapter 5",
-        "support": 3,
-        "renown": 9,
-        "negotiation": "Moderate",
-        "extra": []
-      },
-      "dietrich": {
         "chapter": "Part I Chapter 4",
         "support": 3,
+        "renown": 9,
+        "negotiation": "",
+        "extra": [
+          "Give Mu 3 Glirmosa"
+        ]
+      },
+      "dietrich": {
+        "chapter": "Part I Chapter 5",
+        "support": 3,
         "renown": 7,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Mu 3 Glirmosa"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 9,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Mu 3 Glirmosa"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter 1",
@@ -2401,15 +2441,19 @@ export default {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 6,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Sandworm Meat to Nezha"
+        ]
       },
       "dietrich": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 10,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Sandworm Meat to Nezha"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
@@ -2424,8 +2468,10 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 9,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Sandworm Meat to Nezha"
+        ]
       }
     },
     "earliest": [
@@ -2627,7 +2673,7 @@ export default {
     ],
     "routes": {
       "cai": {
-        "chapter": "Part I Chapter 7",
+        "chapter": "Part I Chapter 6",
         "support": 2,
         "renown": 6,
         "negotiation": "",
@@ -2639,27 +2685,33 @@ export default {
         "chapter": "Part I Chapter 8",
         "support": 1,
         "renown": 9,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Iron Bows to Nuzzuo"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 9",
         "support": 1,
         "renown": 6,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Iron Bows to Nuzzuo"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter ?",
         "support": 3,
         "renown": 9,
-        "negotiation": "Moderate",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give 3 Iron Bows to Nuzzuo"
+        ]
       }
     },
     "earliest": [
       1,
-      7
+      6
     ]
   },
   "nydine": {
@@ -2725,7 +2777,7 @@ export default {
         "renown": 5,
         "negotiation": "",
         "extra": [
-          "Give 2 Bronze Axes to Nydine"
+          "Give 3 Iron Axes to Nydine"
         ]
       },
       "leda": {
@@ -2734,7 +2786,7 @@ export default {
         "renown": 10,
         "negotiation": "",
         "extra": [
-          "Give 2 Bronze Axes to Nydine"
+          "Give 3 Iron Axes to Nydine"
         ]
       }
     },
@@ -2785,7 +2837,7 @@ export default {
     ],
     "routes": {
       "cai": {
-        "chapter": "Part I Chapter 5",
+        "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 8,
         "negotiation": "",
@@ -2794,7 +2846,7 @@ export default {
         ]
       },
       "dietrich": {
-        "chapter": "Part I Chapter 4",
+        "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 6,
         "negotiation": "",
@@ -2947,22 +2999,28 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 9,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Peter 1 Phantom Ginji"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 7,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Peter 1 Phantom Ginji"
+        ]
       },
       "leda": {
-        "chapter": "Part I Chapter 7",
+        "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 10,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Peter 1 Phantom Ginji"
+        ]
       }
     },
     "earliest": [
@@ -3153,32 +3211,40 @@ export default {
     ],
     "routes": {
       "cai": {
-        "chapter": "Part I Chapter 4",
+        "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 8,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Pay 500 Gold and pick tails on coin toss"
+        ]
       },
       "dietrich": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 7,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Pay 500 Gold and pick tails on coin toss"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 7,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Pay 500 Gold and pick tails on coin toss"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 6,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Pay 500 Gold and pick tails on coin toss"
+        ]
       }
     },
     "earliest": [
@@ -3228,7 +3294,7 @@ export default {
     ],
     "routes": {
       "cai": {
-        "chapter": "Part I Chapter 5",
+        "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 9,
         "negotiation": "",
@@ -3237,7 +3303,7 @@ export default {
         ]
       },
       "dietrich": {
-        "chapter": "Part I Chapter 4",
+        "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 9,
         "negotiation": "",
@@ -3450,7 +3516,7 @@ export default {
         "renown": 9,
         "negotiation": "",
         "extra": [
-          "Clear Cai's Paralogue"
+          "Clear Cai's Paralogue then give 3000 gold"
         ]
       },
       "theodora": {
@@ -3459,7 +3525,7 @@ export default {
         "renown": 10,
         "negotiation": "",
         "extra": [
-          "Clear Cai's Paralogue"
+          "Clear Cai's Paralogue then give 3000 gold"
         ]
       },
       "leda": {
@@ -3468,7 +3534,7 @@ export default {
         "renown": 8,
         "negotiation": "",
         "extra": [
-          "Clear Cai's Paralogue"
+          "Clear Cai's Paralogue then give 3000 gold"
         ]
       }
     },
@@ -3652,22 +3718,28 @@ export default {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 5,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Ultand Her Mother's Gift"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 6,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Ultand Her Mother's Gift"
+        ]
       },
       "leda": {
-        "chapter": "Part I Chapter 8",
+        "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 8,
-        "negotiation": "Hard",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Give Ultand Her Mother's Gift"
+        ]
       }
     },
     "earliest": [
@@ -3721,7 +3793,7 @@ export default {
         "renown": 10,
         "negotiation": "",
         "extra": [
-          "Complete Talimun's Paralogue"
+          "Complete Talimun's Paralogue then select Agree 3 times"
         ]
       },
       "dietrich": {
@@ -3730,7 +3802,7 @@ export default {
         "renown": 7,
         "negotiation": "",
         "extra": [
-          "Complete Talimun's Paralogue"
+          "Complete Talimun's Paralogue then select Agree 3 times"
         ]
       },
       "theodora": {
@@ -3739,7 +3811,7 @@ export default {
         "renown": 9,
         "negotiation": "",
         "extra": [
-          "Complete Talimun's Paralogue"
+          "Complete Talimun's Paralogue then select Agree 3 times"
         ]
       },
       "leda": null
@@ -3875,29 +3947,37 @@ export default {
         "chapter": "Part I Chapter 5",
         "support": 3,
         "renown": 8,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Refuse To Pay Twice Then Pay Zarcone 10 Gold"
+        ]
       },
       "dietrich": {
         "chapter": "Part I Chapter 4",
         "support": 3,
         "renown": 7,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Refuse To Pay Twice Then Pay Zarcone 10 Gold"
+        ]
       },
       "theodora": {
         "chapter": "Part I Chapter 5",
         "support": 1,
         "renown": 4,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Refuse To Pay Twice Then Pay Zarcone 10 Gold"
+        ]
       },
       "leda": {
         "chapter": "Part I Chapter 4",
         "support": 2,
         "renown": 5,
-        "negotiation": "Easy",
-        "extra": []
+        "negotiation": "",
+        "extra": [
+          "Refuse To Pay Twice Then Pay Zarcone 10 Gold"
+        ]
       }
     },
     "earliest": [

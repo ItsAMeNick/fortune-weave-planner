@@ -629,6 +629,78 @@ const UNIT_TYPES = () =>
 const CLASS_SKILLS = () =>
   [...new Set(Object.values(classData).flatMap((c) => c.skills.map((s) => s.skill)))].sort();
 
+/**
+ * Who suits a class, by two signals kept separate because they mean different
+ * things: the class guide naming it in a character's recommended progression,
+ * and the character already being proficient in every rank it gates on.
+ * Both lists are ordered by growth synergy — how much the class's growth
+ * modifier pushes the stats that character is already above their own average in.
+ */
+function classFits(clsSlug) {
+  const cls = classData[clsSlug];
+  const synergy = (character) => {
+    if (!cls.growths || !Object.keys(character.growths).length) return 0;
+    const values = STATS.map((s) => character.growths[s]).filter((v) => typeof v === "number");
+    const mean = values.reduce((a, b) => a + b, 0) / values.length;
+    return STATS.reduce(
+      (sum, s) => sum + (cls.growths[s] || 0) * ((character.growths[s] ?? mean) - mean),
+      0
+    );
+  };
+
+  const recommended = [];
+  const natural = [];
+  for (const [slug, character] of Object.entries(charData)) {
+    if (character.classPath.includes(cls.name)) recommended.push(slug);
+    else if (
+      cls.skills.length &&
+      cls.skills.every((k) => character.proficiencies.map(stripSkill).includes(k.skill))
+    ) {
+      natural.push(slug);
+    }
+  }
+  const bySynergy = (a, b) => synergy(charData[b]) - synergy(charData[a]);
+  recommended.sort(bySynergy);
+  natural.sort(bySynergy);
+
+  // Nothing to go on: fall back to the growth fit alone.
+  const fallback =
+    recommended.length || natural.length
+      ? []
+      : Object.keys(charData)
+          .sort(bySynergy)
+          .filter((slug) => synergy(charData[slug]) > 0)
+          .slice(0, 6);
+
+  return { recommended, natural, fallback };
+}
+
+function portrait(slug, kind) {
+  const c = charData[slug];
+  const why = {
+    recommended: "recommended for this class",
+    natural: "already proficient in every rank it needs",
+    fallback: "growths line up with what this class boosts",
+  }[kind];
+  return `<button class="mini mini--${kind}" data-char="${slug}" title="${c.name} — ${why}">
+    <img src="${c.portrait}" alt="${c.name}" loading="lazy"></button>`;
+}
+
+/** Portraits for a class card: recommended first, topped up with natural fits. */
+function fitStrip(clsSlug, limit = 6) {
+  const { recommended, natural, fallback } = classFits(clsSlug);
+  const picks = [
+    ...recommended.map((s) => [s, "recommended"]),
+    ...natural.map((s) => [s, "natural"]),
+    ...fallback.map((s) => [s, "fallback"]),
+  ];
+  const shown = picks.slice(0, limit).map(([s, kind]) => portrait(s, kind));
+  const extra = picks.length - shown.length;
+  return `<div class="fit-strip">${shown.join("")}${
+    extra > 0 ? `<span class="fit-more">+${extra}</span>` : ""
+  }</div>`;
+}
+
 function buildClassGrid() {
   const grid = document.getElementById("class-grid");
   grid.innerHTML = "";
@@ -653,8 +725,13 @@ function buildClassGrid() {
           <span class="class-card__req">Lv ${c.level}${
             c.renown ? ` · ${c.renown} Renown` : ""
           }${c.skills.length ? ` · ${c.skills.map((k) => `${k.skill} ${k.rank}`).join(", ")}` : ""}</span>
+          ${fitStrip(slug)}
         </div>`;
-      card.addEventListener("click", () => openClassDetail(slug));
+      card.addEventListener("click", (e) => {
+        const mini = e.target.closest(".mini");
+        if (mini) openDetail(mini.dataset.char);
+        else openClassDetail(slug);
+      });
       grid.appendChild(card);
     });
 }
@@ -688,12 +765,17 @@ function renderClassGrid() {
   });
 }
 
+function fitSection(title, note, slugs, kind) {
+  if (!slugs.length) return "";
+  return `<p class="section-title">${title} <span class="section-note">— ${note}</span></p>
+    <div class="detail__fits">${slugs
+      .map((s) => `<span class="fit-name">${portrait(s, kind)}${charData[s].name}</span>`)
+      .join("")}</div>`;
+}
+
 function openClassDetail(slug) {
   const c = classData[slug];
-  const owned = (character) => new Set(character.proficiencies.map(stripSkill));
-  const natural = Object.values(charData)
-    .filter((ch) => c.skills.length && c.skills.every((k) => owned(ch).has(k.skill)))
-    .map((ch) => ch.name);
+  const { recommended, natural, fallback } = classFits(slug);
   const planned = plannedBy(slug);
 
   const statRows = c.growths
@@ -760,12 +842,18 @@ function openClassDetail(slug) {
         }</p>
       </div>
     </div>
-    <p class="section-title">Natural Fits <span class="section-note">— every required rank is already a proficiency</span></p>
-    <div class="detail__fits">${
-      natural.length
-        ? natural.map((n) => `<span class="pill">${n}</span>`).join("")
-        : `<span class="dim">No character covers every required skill — expect some training.</span>`
-    }</div>`);
+    ${fitSection("Recommended For", "the class guide puts it in their progression", recommended, "recommended")}
+    ${fitSection("Natural Fits", "every rank it needs is already a proficiency", natural, "natural")}
+    ${fitSection("Best Growth Synergy", "their strong growths are what this class boosts", fallback, "fallback")}
+    ${
+      recommended.length || natural.length || fallback.length
+        ? ""
+        : `<p class="hint">Nobody stands out for this class yet.</p>`
+    }`);
+
+  document.querySelectorAll("#detail .mini").forEach((mini) => {
+    mini.addEventListener("click", () => openDetail(mini.dataset.char));
+  });
 }
 
 // ── detail modal ──────────────────────────────────────────────────────────────

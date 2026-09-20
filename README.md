@@ -57,14 +57,28 @@ current army it also breaks growths into base, the final class's modifier, and t
 total.
 
 **Class browser.** The right panel toggles between *Characters* and *Classes*. The class
-list covers all 43, ordered by license tier and filterable by tier, unit type and required
+list covers all 49, ordered by license tier and filterable by tier, unit type and required
 skill, with an *In this army's builds* filter and an accent stripe on anything the current
 army is already building into. Opening one shows its license and level gates, Renown
 requirement, the Part it unlocks in, primary/secondary skill ranks, flat stat bonuses
-beside class growth modifiers, class and mastery abilities, skill EXP bonuses, who in the
-current army is building into it, and every character whose proficiencies already cover
-its skill requirements. The same panel opens from the `i` beside each tier dropdown in an
-army slot and from the steps of a character's recommended class path.
+beside class growth modifiers, class and mastery abilities, skill EXP bonuses, and who in
+the current army is building into it. The same panel opens from the `i` beside each tier
+dropdown in an army slot and from the steps of a character's recommended class path.
+
+**Who suits a class.** Every class card carries a row of portraits, and the detail panel
+lists them in full. They come from three signals, kept apart because they mean different
+things, and each is ordered by growth synergy — how much the class's growth modifier
+pushes the stats that character is already above their own average in:
+
+| Ring | Signal | Meaning |
+|---|---|---|
+| Accent ring | Recommended for | The class guide puts it in that character's progression |
+| Plain | Natural fit | They are already proficient in every rank the class gates on |
+| Dashed, faded | Growth synergy | Neither of the above exists for this class, so the growth fit stands alone |
+
+Clicking a portrait opens that character. Three classes (Great Knight, High Savant,
+Valkyrium) show nobody — they are new enough to have neither recommendations nor published
+growths.
 
 **Balance checks.** Proficiency coverage counts how many of your army are natural
 Sword/Bow/White Magic/Flier/etc. users — an easy way to notice you have no healer — and
@@ -107,7 +121,7 @@ python3 scripts/transform.py    # raw/ -> static/js/*.js
 | File | Contents |
 |---|---|
 | `static/js/characters.js` | 53 characters: portrait, faction, likes, interests, growth rates, personal ability, proficiencies, recommended class path, and per-route recruitment requirements |
-| `static/js/classes.js` | 43 classes: license tier, unlock part, ideal level, Renown level, skill-rank requirements, class and mastery abilities, unit type, movement, flat stat bonuses and class growth modifiers |
+| `static/js/classes.js` | 49 classes: license tier, unlock part, ideal level, Renown level, skill-rank requirements, class and mastery abilities, unit type, movement, flat stat bonuses and class growth modifiers |
 | `static/js/paralogues.js` | 9 paralogues: per-route chapter and date window, rewards, and which recruits they gate |
 
 `raw/` is cached HTML and is gitignored; `scripts/transform.py` is pure parsing, so you
@@ -120,9 +134,8 @@ The game is days old and the guides are still marked work-in-progress, so:
 - **Growth rates only, no base stats or level curves.** Switch 2 titles can't be
   datamined, so nobody has published bases yet. When they do, add them in
   `parse_character_page()` and they'll flow straight into the detail panel.
-- **13 classes have no growth data yet** (Battlemaster, Bow Adept, Castle Knight, Dancer,
-  Druid, Elephant Rider, Orichaldia, Ranger, Sentinel, Shadow Seeker, Valkyrium, War Monk,
-  Wiseman) — mostly Master tier, which has no individual Game8 pages yet. They're still
+- **8 classes have no growth data yet** (Bow Knight, Dancer, Great Knight, High Savant,
+  Ranger, Sword Master, Valkyrium, War Monk) — no individual Game8 page yet. They're still
   pickable in a build; the slot just says the growths aren't published.
 - **Part I recruitment only.** Characters who join in later Parts (Anatolia, Talimun,
   Bertrand, Orchel, Centurio, Creek, Aswan) aren't in the recruitment table yet and so

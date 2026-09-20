@@ -158,7 +158,10 @@ export default {
     "routes": {
       "cai": null,
       "dietrich": null,
-      "theodora": null,
+      "theodora": {
+        "chapter": "Ch. 12",
+        "window": "10/16 - 11/1"
+      },
       "leda": {
         "chapter": "Ch. 11",
         "window": "10/16 - 11/1"
